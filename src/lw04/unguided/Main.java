@@ -1,6 +1,7 @@
 
+package lw04.unguided;
+
 import java.util.Scanner;
-import java.io.InputStream;
 
 public class Main {
 
@@ -52,11 +53,6 @@ public class Main {
     public static void main(String[] args) {
 
         InputStream input = Main.class.getResourceAsStream("parcels.txt");
-
-        if (input == null) {
-            System.out.println("File parcels.txt tidak ditemukan.");
-            return;
-        }
 
         try (Scanner sc = new Scanner(input)) {
 
@@ -119,8 +115,5 @@ public class Main {
             }
 
         } 
-        catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
     }
 }
